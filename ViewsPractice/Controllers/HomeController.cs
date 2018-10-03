@@ -28,7 +28,15 @@ namespace ViewsPractice.Controllers
         [HttpPost]
         public ViewResult RsvpForm(GuestReponse guestReponse)
         {
-            return View("Thanks!", guestReponse);
+            if (ModelState.IsValid)
+            {
+                return View("Thanks!", guestReponse);
+            }
+            else
+            {
+                //Validation error
+                return View();
+            }
         }
 
     }
