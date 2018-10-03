@@ -1,0 +1,27 @@
+﻿@model ViewsPractice.Models.GuestReponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <div> 
+        <h1>Thank You! @Model.Name</h1>
+        @if (Model.WillAttend == true)
+        {
+            <p>We look forward to seeing you!</p>
+        }
+        else
+        {
+            <p>Hopefully next time you can make it...</p>
+        }
+    </div>
+</body>
+</html>
