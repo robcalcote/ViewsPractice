@@ -17,5 +17,10 @@ namespace ViewsPractice.Controllers
 
             return View();
         }
+
+        public ViewResult RsvpForm()
+        {
+            return View();
+        }
     }
 }
