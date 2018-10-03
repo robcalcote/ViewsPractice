@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ViewsPractice.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,9 +19,17 @@ namespace ViewsPractice.Controllers
             return View();
         }
 
+        [HttpGet]
         public ViewResult RsvpForm()
         {
             return View();
         }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestReponse guestReponse)
+        {
+            return View("Thanks!", guestReponse);
+        }
+
     }
 }
